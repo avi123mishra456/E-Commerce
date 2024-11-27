@@ -2,74 +2,77 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f9f9f9;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f9f9f9;
 }
 
 .container {
-  display: flex;
-  width: 80%;
-  border: 1px solid #ccc;
+  background: #fff;
+  padding: 20px 30px;
   border-radius: 8px;
-  overflow: hidden;
-  background-color: #fff;
-}
-
-.left-panel, .right-panel {
-  flex: 1;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.left-panel {
-  background-color: #f0f0f0;
-  border-right: 1px solid #ccc;
-}
-
-.right-panel {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
+  max-width: 400px;
 }
 
-h2 {
-  margin-top: 0;
-  text-align: center;
+h1 {
+  color: #333;
 }
 
-.option-btn {
+.checkbox-group label {
   display: block;
-  width: 100%;
   margin: 10px 0;
-  padding: 10px;
+  font-size: 16px;
+}
+
+button {
   background-color: #007bff;
   color: #fff;
+  padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  text-align: left;
+  font-size: 16px;
 }
 
-.option-btn:hover {
+button:hover {
   background-color: #0056b3;
 }
 
-#action-container {
-  margin-top: 20px;
+/* Glowing effect for the result */
+.result {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  animation: glow 1.5s infinite;
 }
 
-.action-btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 15px;
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.satisfied {
+  color: white;
+  background: linear-gradient(90deg, #28a745, #85e085);
+  box-shadow: 0 0 15px #28a745, 0 0 25px #85e085, 0 0 35px #28a745;
 }
 
-.action-btn:hover {
-  background-color: #218838;
+.dissatisfied {
+  color: white;
+  background: linear-gradient(90deg, #dc3545, #ff9999);
+  box-shadow: 0 0 15px #dc3545, 0 0 25px #ff9999, 0 0 35px #dc3545;
+}
+
+/* Keyframes for glowing effect */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
 }
