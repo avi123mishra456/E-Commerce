@@ -8,24 +8,22 @@
 </head>
 <body>
   <div class="container">
-    <div class="left-panel">
-      <h2>Options</h2>
-      <button class="option-btn" data-target="Accessibility">Accessibility</button>
-      <button class="option-btn" data-target="Delivery Charges">Delivery Charges</button>
-      <button class="option-btn" data-target="Ecological Packaging">Ecological Packaging</button>
-      <button class="option-btn" data-target="Reverse Logistics">Reverse Logistics</button>
-      <button class="option-btn" data-target="Responsiveness Mechanism">Responsiveness Mechanism</button>
-      <button class="option-btn" data-target="Delivery Speed">Delivery Speed</button>
-      <button class="option-btn" data-target="Product Condition">Product Condition</button>
-      <button class="option-btn" data-target="Tracking Facilities">Tracking Facilities</button>
-      <button class="option-btn" data-target="Product Availability">Product Availability</button>
-    </div>
-    <div class="right-panel">
-      <h2>Actions</h2>
-      <div id="action-container">
-        <p>Click a button on the left to see options here.</p>
+    <h1>Customer Satisfaction Survey</h1>
+    <p><b>Please select the marketing logistics factors based on your recent online shopping:</b></p>
+    <form id="satisfactionForm">
+      <div class="checkbox-group" style="text-align: left;">
+        <label><input type="checkbox" class="parameter" value="Accessibility"> Accessibility</label>
+        <label><input type="checkbox" class="parameter" value="Delivery charges"> Delivery charges</label>
+        <label><input type="checkbox" class="parameter" value="Ecological Packaging"> Ecological Packaging</label>
+        <label><input type="checkbox" class="parameter" value="Reverse Logistics"> Reverse Logistics</label>
+        <label><input type="checkbox" class="parameter" value="Responsiveness mechanism"> Responsiveness mechanism</label>
+        <label><input type="checkbox" class="parameter" value="Delivery speed"> Delivery speed</label>
+        <label><input type="checkbox" class="parameter" value="Product condition"> Product condition</label>
+        <label><input type="checkbox" class="parameter" value="Tracking Facilities"> Tracking Facilities</label>
+        <label><input type="checkbox" class="parameter" value="Product Availability"> Product Availability</label>
       </div>
-    </div>
+      <button type="button" id="submitBtn">Submit</button>
+    </form>
   </div>
   <script src="script.js"></script>
 </body>
