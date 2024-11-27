@@ -16,10 +16,22 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   max-width: 400px;
+  width: 100%;
 }
 
 h1 {
-  color: #333;
+  color: #8b0000; /* Dark Blood Red Color */
+  font-size: 24px;
+  background-color: #f0f8ff; /* Light Background for the Heading */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.checkbox-group {
+  background-color: #e0f7fa; /* Light Blue Background */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px; /* Optional: Space between checkbox group and submit button */
 }
 
 .checkbox-group label {
@@ -74,5 +86,54 @@ button:hover {
   }
   100% {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .checkbox-group label {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .result {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .checkbox-group label {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .result {
+    font-size: 24px;
   }
 }
