@@ -1,39 +1,21 @@
-// Get all the buttons on the left panel
-const optionButtons = document.querySelectorAll('.option-btn');
+document.getElementById("submitBtn").addEventListener("click", function () {
+  const selectedParameters = document.querySelectorAll(".parameter:checked");
+  const isSatisfied = selectedParameters.length >= 5;
 
-// Get the action container in the right panel
-const actionContainer = document.getElementById('action-container');
+  // Remove any existing result
+  const oldResult = document.querySelector(".result");
+  if (oldResult) oldResult.remove();
 
-// Define the actions to display when a button is clicked
-const actions = ['Repurchase Intention', 'Word of Mouth', 'Customer Loyalty'];
+  // Create a new result element
+  const result = document.createElement("div");
+  result.classList.add("result");
+  if (isSatisfied) {
+    result.textContent = "Satisfied";
+    result.classList.add("satisfied");
+  } else {
+    result.textContent = "Dissatisfied";
+    result.classList.add("dissatisfied");
+  }
 
-// Add event listeners to all buttons
-optionButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    // Clear the current content in the action container
-    actionContainer.innerHTML = '';
-
-    // Get the target name from the button's data attribute
-    const targetName = button.dataset.target;
-
-    // Create a heading to display the selected option
-    const heading = document.createElement('h3');
-    heading.textContent = `Actions for ${targetName}`;
-    actionContainer.appendChild(heading);
-
-    // Create buttons for each action
-    actions.forEach(action => {
-      const actionButton = document.createElement('button');
-      actionButton.className = 'action-btn';
-      actionButton.textContent = action;
-
-      // Add a click event to the action button
-      actionButton.addEventListener('click', () => {
-        alert(`You selected "${action}" for "${targetName}"`);
-      });
-
-      // Append the button to the action container
-      actionContainer.appendChild(actionButton);
-    });
-  });
+  document.body.appendChild(result);
 });
